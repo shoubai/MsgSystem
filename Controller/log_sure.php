@@ -24,8 +24,10 @@ require_once('./config.php');
 	 		exit('<script> alert("用户名密码错误 请检查是否正确"); history.back();</script>');
 	 	}
 	 	else{
-	 		$_SESSION['uid'] = $userinfo['uid'];
-	 		$_SESSION['nickname'] = $userinfo['nickname'];
+			$_SESSION['uid'] = $userinfo['uid'];
+			$_SESSION['username'] = $userinfo['username']; 
+			$_SESSION['nickname'] = $userinfo['nickname'];
+			 
 	 		exit('<script>alert("Access Successful"); window.location.href = "guestbook.php"</script>');
 	 	}
 	 }else{

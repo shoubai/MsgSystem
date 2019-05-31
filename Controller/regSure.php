@@ -6,7 +6,7 @@ require_once('./14_file_sure.php');
 <html>
 <head>
 <meta charset="utf-8">
-<title>判断逻辑</title>
+<title>用户注册判断逻辑</title>
 </head>
 
 <body>
@@ -18,8 +18,8 @@ require_once('./14_file_sure.php');
 	$headimg = $_FILES['headimg'];
 
 	$classname = new uploadfile();
-	$qq = $classname->upload($headimg);
-	$url = $qq['url'];
+	$con = $classname->upload($headimg);
+	$url = $con['url'];
 
 	if(!$username) {
 		exit('<script>alert("请输入用户名"); history.back(); </script>');
@@ -32,6 +32,10 @@ require_once('./14_file_sure.php');
 	}
 	if(!$nickname) {
 		exit('<script>alert("请输入昵称"); history.back(); </script>');
+	}
+	if($repassword != $password)
+	{
+		exit('<script>alert("两次密码输入不一致"); history.back(); </script>');
 	}
 	
 	$sql = "select * from userlist where username = '".$username."'";

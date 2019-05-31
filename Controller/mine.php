@@ -1,6 +1,5 @@
 <?php
     require_once('./config.php');
-//    echo $_SESSION['nickname'];
 ?>
 <!-- 用户信息界面 -->
 <!DOCTYPE html>
@@ -34,12 +33,13 @@
 	<div style="height:20px"></div>
 	<table border="1" align="center" width="780px" height="200px">
 		<tr>
-			<th colspan="3">用户信息</th>
+			<th colspan="4">用户信息</th>
 		</tr>
 		<tr>
 			<th>用户账号</th>
 			<th>用户名</th>
 			<th>用户头像</th>
+			<th></th>
 		</tr>
     <?php
         $nickname = $_SESSION['nickname'];
@@ -57,6 +57,9 @@
 				</td>
 				<td>
 					<img src="<?php echo $v['headimg']?>"height="100px" width="100px"; >
+				</td>
+				<td>
+					<a href="change.php"><p>修改信息</p></a>
 				</td>
 			</tr>
 		<?php }?>
