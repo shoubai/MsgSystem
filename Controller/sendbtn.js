@@ -1,26 +1,47 @@
-$(function(){
-    $("#sendbtn").click(function(){
+$(function () {
+    $("#sendbtn").click(function () {
         var content = $("#content").val();
-        if(!content){
+        if (!content) {
             alert("请输入聊天内容");
         }
         $.ajax({
-            url:'chart_add.php',
-            type:'POST',
-            dataType:'json',
-            data:{co:content},
-            success:function(data){
-                if(data.code == 1){
+            url: 'chart_add.php',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                co: content
+            },
+            success: function (data) {
+                if (data.code == 1) {
                     $("#content").val('');
-                    alert('成功');
-                }else{
-                    alert('失败: ',data.msg);
-
+                    getMsg();
+                } else {
+                    alert('失败: ', data.msg);
                 }
             },
-            error:function(){
+            error: function () {
                 alert("系统错误");
             }
         })
     })
+    getMsg();
 })
+
+function getMsg() {
+    $.ajax({
+        url: 'chart_list.php',
+        type: 'POST',
+        dataType: 'json',
+        success: function (data) {
+            if (data.code == 1) {
+                let str = '';
+                console.log(data.list);
+                for (const item of data.list) {
+                    str += `<div>${item.content}</div>`;
+                }
+                //在showmsg标签后面添加str这句话，使用html
+                $("#showmsg").append(str);
+            }
+        }
+    })
+}

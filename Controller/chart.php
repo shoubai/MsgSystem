@@ -42,7 +42,7 @@ if(!$_SESSION['uid']){
    <table width="900" height="582" border="1">
   <tbody>
     <tr>
-      <td width="707" height="380">&nbsp;</td>
+      <td width="707" height="380" id="showmsg">&nbsp;</td>
       <td width="177" rowspan="3">&nbsp;</td>
     </tr>
     <tr>
