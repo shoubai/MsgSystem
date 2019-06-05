@@ -1,12 +1,12 @@
 <?php
-require_once('./config.php');
+require_once('../Model/lib/config.php');
 if(!$_SESSION['uid']){
 	exit('<script>alert("该用户已经存在"); history.back();</script>');
 }
 
 ?>
-<script src="jq.js"></script>
-<script src="sendbtn.js"></script>
+<script src="../Controller/jq.js"></script>
+<script src="../Controller/sendbtn.js"></script>
 <!DOCTYPE html>
 <head>
     <style>
@@ -17,12 +17,12 @@ if(!$_SESSION['uid']){
             width: 100%;
             height: 100%;
             resize:none;
-			background-color:transparent;
-			font-size: 18px;
+            background-color:transparent;
+            font-size: 18px;
         }
-		body{
-			background-image: url("../Views/bg11.jpg")
-		}
+        body{
+          background-image: url("img/bg11.jpg")
+        }
     </style>
     <meta charset="UTF-8">
     <title>聊天室</title>

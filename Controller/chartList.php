@@ -1,5 +1,5 @@
 <?php
-require_once('./config.php');
+require_once('../Model/lib/config.php');
 
 $sql = "select *from chart";
 $list = $db->getRows($sql);

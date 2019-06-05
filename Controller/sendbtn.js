@@ -5,7 +5,7 @@ $(function () {
             alert("请输入聊天内容");
         }
         $.ajax({
-            url: 'chart_add.php',
+            url: 'chartAdd.php',
             type: 'POST',
             dataType: 'json',
             data: {
@@ -29,7 +29,7 @@ $(function () {
 
 function getMsg() {
     $.ajax({
-        url: 'chart_list.php',
+        url: 'chartList.php',
         type: 'POST',
         dataType: 'json',
         success: function (data) {

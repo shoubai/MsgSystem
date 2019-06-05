@@ -1,5 +1,5 @@
 <?php
-    require_once('./config.php');
+    require_once('../Model/lib/config.php');
 ?>
 <!-- 用户信息界面 -->
 <!DOCTYPE html>

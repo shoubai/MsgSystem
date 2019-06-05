@@ -1,6 +1,5 @@
 <?php
-require_once('./config.php');
-
+require_once('../Model/lib/config.php');
 ?>
 <!doctype html>
 <html>
@@ -28,7 +27,7 @@ require_once('./config.php');
 			$_SESSION['username'] = $userinfo['username']; 
 			$_SESSION['nickname'] = $userinfo['nickname'];
 			 
-	 		exit('<script>alert("Access Successful"); window.location.href = "guestbook.php"</script>');
+	 		exit('<script>alert("Access Successful"); window.location.href = "../Views/guestbook.php"</script>');
 	 	}
 	 }else{
 	 	exit('<script> alert("用户未注册"); history.back();</script>');

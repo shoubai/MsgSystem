@@ -1,5 +1,5 @@
 <?php
-require_once('./config.php');
+require_once('../Model/lib/config.php');
 if(!$_SESSION['uid']){
 	exit('<script>alert("该用户已经存在"); history.back();</script>');
 }
@@ -8,7 +8,7 @@ if(!$_SESSION['uid']){
 <html>
 	<style>
 		#btn{
-			background-image: url("../Views/bg4.jpg");
+			background-image: url("img/bg4.jpg");
 			border: none;
 			color:lightcyan;
 			padding: 15px 32px;
@@ -32,7 +32,6 @@ if(!$_SESSION['uid']){
 		#type{
 			float: right;
 		}
-		
 		#add{
 			width: 708px; 
 			min-height: 220px; 
@@ -42,7 +41,7 @@ if(!$_SESSION['uid']){
 			font-size: 18px;
 		}
 		body{
-			background-image: url("../Views/bg11.jpg")
+			background-image: url("img/bg11.jpg")
 		}
 	</style>
 <head>
@@ -97,8 +96,8 @@ if(!$_SESSION['uid']){
 					?>
 							<br>
 							<div id="type">
-								<a href="guest_edit.php?id=<?php echo $v['id'];?>">编辑</a>&nbsp;
-								<a href="guest_del.php?id=<?php echo $v['id'];?>">删除</a>	
+								<a href="guestEdit.php?id=<?php echo $v['id'];?>">编辑</a>&nbsp;
+								<a href="guestDel.php?id=<?php echo $v['id'];?>">删除</a>	
 							</div>
 							
 							<?php } ?>
@@ -107,7 +106,7 @@ if(!$_SESSION['uid']){
                 <?php } ?>
 		</table>
 	<div style="height:400px;">
-	<form action="./guest_sure.php" enctype="multipart/form-data" method="post">
+	<form action="../Controller/guestSure.php" enctype="multipart/form-data" method="post">
 		
 			<textarea style="min-height: 220px;
 			color:lightcyan;

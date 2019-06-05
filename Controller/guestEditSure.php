@@ -1,5 +1,5 @@
 <?php 
-require_once('./config.php')
+require_once('../Model/lib/config.php')
 ?>
 <!doctype html>
 <html>
@@ -18,7 +18,7 @@ require_once('./config.php')
         $sql = "update guestbook set comment= '".$comment."' where id=".$id." and uid = ".$_SESSION['uid'];
         $query = $db->query($sql);
         if($query){
-            exit('<script>alert("编辑成功");window.location.href="guestbook.php";</script>');
+            exit('<script>alert("编辑成功");window.location.href="../Views/guestBook.php";</script>');
         }else{
             exit('<script>alert("编辑失败");history.back();</script>');
         }

@@ -1,4 +1,4 @@
-<?php require_once('./config.php');?>
+<?php require_once('../Model/lib/config.php');?>
 <!doctype html>
 <html>
 <head>
@@ -12,7 +12,7 @@
 		$sql = "delete from guestbook where id=".$id." and uid = ".$_SESSION['uid'];
         $info = $db->query($sql);
         if($info){
-            exit('<script>alert("删除成功");window.location.href="guestbook.php";</script>');
+            exit('<script>alert("删除成功");window.location.href="guestBook.php";</script>');
         }
 	?>
 </body>

@@ -1,6 +1,6 @@
 <?php
-require_once('./config.php');	
-require_once('./14_file_sure.php');
+require_once('../Model/lib/config.php');	
+require_once('./fileSure.php');
 ?>
 <!doctype html>
 <html>
@@ -48,7 +48,7 @@ require_once('./14_file_sure.php');
 	values('".$username."', '".md5($password)."', '".$nickname."','".$url."', '".time()."','".$_SERVER['REMOTE_ADDR']."')";
 	$query = $db -> query($sql);
 	if($query) {
-		exit('<script>alert("注册成功 请登录"); window.location.href = "./login.php"</script>');
+		exit('<script>alert("注册成功 请登录"); window.location.href = "../Views/login.php"</script>');
 	}else{
 		exit('<script> alter("注册失败")； history.back();</script>');
 	}

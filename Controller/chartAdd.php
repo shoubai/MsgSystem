@@ -1,5 +1,5 @@
 <?php
-require_once('./config.php');
+require_once('../Model/lib/config.php');
 $content = $_POST['co'];
 if(!$content){
     $return = array('code'=>0, 'msg'=>'请填写内容');

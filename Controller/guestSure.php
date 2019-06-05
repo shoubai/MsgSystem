@@ -1,5 +1,5 @@
 <?php
-require_once('./config.php');
+require_once('../Model/lib/config.php');
 ?>
 <!doctype html>
 <html>
@@ -22,7 +22,7 @@ require_once('./config.php');
 	
 	$query = $db -> query($sql);
 	if($query) {
-		exit('<script>alert("回复成功"); window.location.href = "./guestbook.php";</script>');
+		exit('<script>alert("回复成功"); window.location.href = "../Views/guestBook.php";</script>');
 	}else{
 		exit('<script> alter("回复失败")； history.back();</script>');
 	}

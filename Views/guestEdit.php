@@ -1,5 +1,5 @@
 <?php
-    require_once('./config.php');
+    require_once('../Model/lib/config.php');
     // if(!$_SESSION['username']){
     //     exit('<script>alert("当前用户未登录");window.location.href="login.php"</script>');
     // }
@@ -34,7 +34,7 @@
 		}
 		.btn{
 			margin: 0 0 0 48%;	
-			background-image: url("../Views/bg5.jpg");
+			background-image: url("img/bg5.jpg");
 			border: none;
 			color:black;
 			padding: 15px 32px;
@@ -44,7 +44,7 @@
 			font-size: 16px;
 		}
 		body{
-			background-image: url("../Views/bg4.jpg");
+			background-image: url("img/bg4.jpg");
 			background-size: 100%;
 		}
 	</style>
@@ -64,7 +64,7 @@
 	?>
 <body >
 		
-	<form action="guest_edit_sure.php" method="post" enctype="multipart/form-data">  
+	<form action="../Controller/guestEditSure.php" method="post" enctype="multipart/form-data">  
 			
 				<input class="text" type="text" checked="checked" id="comment" name="comment"
 					value="<?php echo $info['comment']?>">
