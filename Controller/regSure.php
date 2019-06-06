@@ -1,6 +1,6 @@
 <?php
 require_once('../Model/lib/config.php');	
-require_once('./fileSure.php');
+require_once('../Views/fileSure.php');
 ?>
 <!doctype html>
 <html>

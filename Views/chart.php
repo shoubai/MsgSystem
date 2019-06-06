@@ -3,8 +3,10 @@ require_once('../Model/lib/config.php');
 if(!$_SESSION['uid']){
 	exit('<script>alert("该用户已经存在"); history.back();</script>');
 }
-
 ?>
+<script>
+  var test = <?php echo $_SESSION['uid'] ?>
+</script>
 <script src="../Controller/jq.js"></script>
 <script src="../Controller/sendbtn.js"></script>
 <!DOCTYPE html>
@@ -42,7 +44,10 @@ if(!$_SESSION['uid']){
    <table width="900" height="582" border="1">
   <tbody>
     <tr>
-      <td width="707" height="380" id="showmsg">&nbsp;</td>
+      <td width="707" height="380"  valign="top" >
+      <div id="showmsg">
+        
+      </div></td>
       <td width="177" rowspan="3">&nbsp;</td>
     </tr>
     <tr>
@@ -51,7 +56,7 @@ if(!$_SESSION['uid']){
         </td>
     </tr>
     <tr>
-      <td height="48" ><input type="button" value="发送" id="sendbtn" style="float:right"></td>
+      <td height="48" ><input type="button" value="点击发送" id="sendbtn" style="float:right"></td>
     </tr>
   </tbody>
 </table>

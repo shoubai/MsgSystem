@@ -5,7 +5,7 @@ $(function () {
             alert("请输入聊天内容");
         }
         $.ajax({
-            url: 'chartAdd.php',
+            url: '../Controller/chartAdd.php',
             type: 'POST',
             dataType: 'json',
             data: {
@@ -14,7 +14,6 @@ $(function () {
             success: function (data) {
                 if (data.code == 1) {
                     $("#content").val('');
-                    getMsg();
                 } else {
                     alert('失败: ', data.msg);
                 }
@@ -24,24 +23,33 @@ $(function () {
             }
         })
     })
-    getMsg();
+    // getMsg();
+    timer = setInterval(getMsg, 500);
 })
 
 function getMsg() {
     $.ajax({
-        url: 'chartList.php',
+        url: '../Controller/chartList.php',
         type: 'POST',
         dataType: 'json',
         success: function (data) {
             if (data.code == 1) {
-                let str = '';
-                console.log(data.list);
-                for (const item of data.list) {
-                    str += `<div>${item.content}</div>`;
-                }
-                //在showmsg标签后面添加str这句话，使用html
-                $("#showmsg").append(str);
+                let list  = data.list;
+                // console.log(data.list)
+                for(let i in list){
+                    if(list[i].uid == test){
+                            // console.log(list[i].content);
+                            str = '<div style="text-align:right">' + list[i].addtime + list[i].nickname + '<br/>' + list[i].content + '<div>';
+                            $("#showmsg").append(str);
+                    }
+                    else{
+                        // console.log(list[i].content);
+                        str = '<div>' + list[i].addtime + list[i].nickname + '<br/>' + list[i].content + '</div>';
+                        //在showmsg标签后面添加str这句话，使用html
+                        $("#showmsg").append(str);
+                } 
             }
-        }
+        }}
     })
 }
+
