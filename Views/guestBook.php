@@ -80,9 +80,9 @@ if(!$_SESSION['uid']){
                 foreach($list as $v){
                 ?>
                     <tr>
-                        <td>
-							
-							<img src="<?php echo $v['headimg']?> "height="50" width="50">
+                        <td style="text-align:center">
+							<img src="../Controller/<?php echo $v['headimg']?> "height="80" width="80">
+							<br>
 							<?php echo $v['nickname'];?>
 						</td>
                         <td>

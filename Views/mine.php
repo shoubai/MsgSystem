@@ -56,7 +56,7 @@
 					<?php echo $v['nickname']?>
 				</td>
 				<td>
-					<img src="<?php echo $v['headimg']?>"height="100px" width="100px"; >
+					<img src="../Controller/<?php echo $v['headimg']?>"height="100px" width="100px"; >
 				</td>
 				<td>
 					<a href="change.php"><p>修改信息</p></a>
