@@ -1,2 +1,59 @@
-# 2019-5-29 第一次更新代码 登陆 注册 留言板的基本功能 以及聊天室的框架
-# 2019-5-31 第二次更新 增加个人中心功能 完成个人中心修改信息
+# MsgSystem
+
+- author: shoubai
+- time: 2019-06-01
+
+## 项目结构与构建思路
+```console
+│  README.md
+│
+├─Controller
+│  │  .gitignore
+│  │  changeSure.php
+│  │  chartAdd.php
+│  │  chartList.php
+│  │  guestEditSure.php
+│  │  guestSure.php
+│  │  jq.js
+│  │  logSure.php
+│  │  regSure.php
+│  │  sendbtn.js
+│  │
+│  └─uploads
+│
+├─Model
+│  ├─front
+│  │  ├─css
+│  │  │
+│  │  ├─fonts
+│  │  │
+│  │  ├─img
+│  │  │
+│  │  ├─js
+│  │  │
+│  │  └─sass
+│  │                  
+│  │
+│  ├─lib
+│  │      config.php
+│  │      MySQL.php
+│  │
+│  └─sql
+│          phpcourse.sql
+│
+└─Views
+    │  .gitignore
+    │  change.php
+    │  chart.php
+    │  fileSure.php
+    │  guestBook.php
+    │  guestDel.php
+    │  guestEdit.php
+    │  login.php
+    │  login1.php
+    │  logout.php
+    │  mine.php
+    │  register.php
+    │  register1.php
+
+```
