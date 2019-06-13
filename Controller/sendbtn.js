@@ -23,8 +23,9 @@ $(function () {
             }
         })
     })
-    // getMsg();
-    timer = setInterval(getMsg, 500);
+    //getMsg();
+    //假如时间设置太短 将很容易重复
+    timer = setInterval(getMsg, 2000);
 })
 
 function getMsg() {
@@ -38,7 +39,6 @@ function getMsg() {
                 // console.log(data.list)
                 for(let i in list){
                     if(list[i].uid == test){
-                            // console.log(list[i].content);
                             str = '<div style="text-align:right">' + list[i].addtime + list[i].nickname + '<br/>' + list[i].content + '<div>';
                             $("#showmsg").append(str);
                     }
@@ -48,6 +48,10 @@ function getMsg() {
                         //在showmsg标签后面添加str这句话，使用html
                         $("#showmsg").append(str);
                 } 
+            }
+                let userlist = data.userlist;
+                for(let j in userlist){
+                    
             }
         }}
     })

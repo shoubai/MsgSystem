@@ -5,7 +5,8 @@ if(!$_SESSION['uid']){
 }
 ?>
 <script>
-  var test = <?php echo $_SESSION['uid'] ?>
+  const test = <?php echo $_SESSION['uid'] ?>
+  // console.log(test);
 </script>
 <script src="../Controller/jq.js"></script>
 <script src="../Controller/sendbtn.js"></script>
