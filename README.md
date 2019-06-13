@@ -42,6 +42,7 @@
 │  │
 │  ├─lib
 │  │      config.php                            链接数据库 Mysql.php中的类及session开启
+|  │      fileSure.php                          头像文件上传的类
 │  │      jq.js                                 Jquery文件
 │  │      MySQL.php                             对数据库中的数据处理的类
 │  └─sql
@@ -50,7 +51,6 @@
 └─Views
     │  change.php                               个人信息修改页面
     │  chart.php                                聊天室界面
-    │  fileSure.php                             头像文件上传的类
     │  guestBook.php                            留言板界面
     │  guestDel.php                             删除留言界面
     │  guestEdit.php                            编辑留言界面

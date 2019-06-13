@@ -1,6 +1,7 @@
 <?php
-require_once('./config.php');
-require_once('./14_file_sure.php');
+require_once('../Model/lib/config.php');
+require_once('../Model/lib/MySQL.php');
+require_once('../Model/lib/fileSure.php');
 ?>
 <!doctype html>
 <html>
@@ -32,7 +33,7 @@ require_once('./14_file_sure.php');
         values('".$username."', '".md5($password)."', '".$nickname."','".$url."', '".time()."','".$_SERVER['REMOTE_ADDR']."')";
         $query = $db -> query($sql);
         if($query) {
-            exit('<script>alert("更新成功"); window.location.href = "./guestbook.php"</script>');
+            exit('<script>alert("更新成功"); window.location.href = "../Views/guestBook.php"</script>');
         }else{
             exit('<script> alter("更新失败")； history.back();</script>');
         }

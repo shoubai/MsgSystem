@@ -1,6 +1,6 @@
 <?php
 // 修改个人信息
-require_once('./config.php')
+require_once('../Model/lib/config.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ require_once('./config.php')
 	</p>
     </div>
     <hr>
-<form action="./changeSure.php" enctype="multipart/form-data" method="post">
+<form action="../Controller/changeSure.php" enctype="multipart/form-data" method="post">
 	<table width="800" border="1" align="center">
   	<tbody>
 	<th colspan="2">
