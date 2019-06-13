@@ -5,7 +5,7 @@ require_once('../Model/lib/config.php')
 <html>
 <head>
 <meta charset="utf-8">
-<title>退出逻辑实现</title>
+<title>用户留言编辑判断</title>
 </head>
 
 <body>
