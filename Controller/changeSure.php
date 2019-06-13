@@ -26,11 +26,10 @@ require_once('../Model/lib/fileSure.php');
             exit('<script>alert("两次密码输入不一致"); history.back(); </script>');
         }
 
-        $sql = "delete from userlist where username = ".'$username'."";
-
         $sql = "insert into
         userlist(username, password, nickname, headimg, regtime, regip) 
         values('".$username."', '".md5($password)."', '".$nickname."','".$url."', '".time()."','".$_SERVER['REMOTE_ADDR']."')";
+        
         $query = $db -> query($sql);
         if($query) {
             exit('<script>alert("更新成功"); window.location.href = "../Views/guestBook.php"</script>');
